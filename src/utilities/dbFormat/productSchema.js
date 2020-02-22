@@ -9,7 +9,7 @@ const attribute = {
 	}
 };
 
-const sizedOrder = {
+const sizeProduct = {
 	size: {
 		required: [true, 'Size of product in this color is required.'],
 		type: String
@@ -25,10 +25,21 @@ const sizedOrder = {
 	discount: {
 		required: [true, 'Amount of the Discount percentage'],
 		type: Number
+	}
+};
+
+const sizedOrder = {
+	color: {
+		required: [true, 'Color of the product'],
+		type: String
 	},
-	attributes: {
-		required: [true, 'Attributes of a product are required.'],
-		type: [attribute]
+	sizes: {
+		required: [true, 'Color of the product'],
+		type: [sizeProduct]
+	},
+	images: {
+		required: [true, 'Images of this product.'],
+		type: [String]
 	}
 };
 
@@ -44,10 +55,6 @@ const product = {
 	colors: {
 		required: [true, 'In which colors, product is available ?'],
 		type: [sizedOrder]
-	},
-	images: {
-		required: [true, 'Images of this product.'],
-		type: [String]
 	},
 	description: {
 		required: [true, 'Product Description is required'],
