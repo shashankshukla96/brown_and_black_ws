@@ -1,5 +1,5 @@
-const notification = require('./notificationSchema.js/index.js.js');
-const order = require('./orderSchema.js/index.js');
+const notification = require('./notificationSchema.js');
+const order = require('./orderSchema.js');
 
 const customer = {
 	email: {

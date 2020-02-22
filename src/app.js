@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 
 app.use(requestLogger);
 app.use('/', router); 
-app.use(errorlogger);
+app.use(errorLogger);
 
 app.listen(5500)
-console.log("Server started on port: 5000")
+console.log("Server started on port: 5500")

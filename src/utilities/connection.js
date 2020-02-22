@@ -41,25 +41,25 @@ connection.getProductCollection = () => {
 		.then(database => {
 			return database.model('product', productSchema);
 		})
-		.catch(err => {
+		.catch(error => {
 			let err = new Error('Could not connect to Database');
 			err.status = 500;
 			throw err;
 		});
 };
 
-let productSchema = mongoose.Schema(product, { collection: 'product' });
+let orderSchema = mongoose.Schema(order, { collection: 'order' });
 
-connection.getProductCollection = () => {
+connection.getOrderCollection = () => {
 	return mongoose
 		.connect(url, {
 			useNewUrlParser: true,
 			useUnifiedTopology: true
 		})
 		.then(database => {
-			return database.model('product', productSchema);
+			return database.model('order', orderSchema);
 		})
-		.catch(err => {
+		.catch(error => {
 			let err = new Error('Could not connect to Database');
 			err.status = 500;
 			throw err;
